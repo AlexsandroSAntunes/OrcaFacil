@@ -1,3 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OrcaFacil</string>
+    <string name="app_name">OrçaFácil</string>
+
+    <!-- Login/Register -->
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="sem_conta_cadastre">Não tem conta? Cadastre-se</string>
+    <string name="cadastrar_conta">Criar Conta</string>
+    <string name="hint_nome">Nome completo</string>
+    <string name="cadastrar">Cadastrar</string>
+
+    <!-- Main -->
+    <string name="resumo_mes">Resumo do mês</string>
+    <string name="saldo_zero">Saldo: R$ 0,00</string>
+
+    <!-- Bottom nav -->
+    <string name="menu_despesas">Despesas</string>
+    <string name="menu_receitas">Receitas</string>
+    <string name="menu_relatorios">Relatórios</string>
+    <string name="menu_config">Configurações</string>
+
+    <!-- Despesa -->
+    <string name="adicionar_despesa">Adicionar Despesa</string>
+    <string name="hint_valor">Valor</string>
+    <string name="hint_data">Data (dd/mm/aaaa)</string>
+    <string name="hint_categoria">Categoria</string>
+    <string name="hint_descricao">Descrição</string>
+    <string name="salvar">Salvar</string>
 </resources>
