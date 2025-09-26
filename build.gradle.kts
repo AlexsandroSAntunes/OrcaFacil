@@ -4,3 +4,14 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
 }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { setUrl("https://jitpack.io") }
+
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.5.0")
+    }
+}
