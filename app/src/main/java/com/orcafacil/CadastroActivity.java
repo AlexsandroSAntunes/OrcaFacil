@@ -7,9 +7,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.orcafacil.LoginActivity;
-import com.orcafacil.R;
-
 public class CadastroActivity extends AppCompatActivity {
 
     private Button btnRegistrar, btnVoltarLogin;
