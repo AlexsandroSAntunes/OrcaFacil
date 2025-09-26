@@ -14,7 +14,7 @@
 
         <TextView
             android:id="@+id/tvResumoMes"
-            android:text="resumo_mes"
+            android:text="resumo mês"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/tvSaldo"
-            android:text="saldo_zero"
+            android:text="saldo zero"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp"

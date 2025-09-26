@@ -10,7 +10,7 @@
         android:id="@+id/recyclerDespesas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/fabAddDespesa"/>
+        android:layout_above="@+id/fabAddDespesa" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddDespesa"
