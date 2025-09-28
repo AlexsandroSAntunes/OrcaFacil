@@ -1,19 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Paleta de cores OrçaFácil -->
-    <color name="of_yellow">#F7C20A</color>
-    <color name="of_purple">#6A1B9A</color>
-    <color name="of_black">#000000</color>
-    <color name="of_white">#FFFFFF</color>
+    <color name="primaryColor">#6A1B9A</color>        <!-- roxo -->
+    <color name="primaryVariant">#4A148C</color>
+    <color name="secondaryColor">#F7C20A</color>      <!-- amarelo -->
+    <color name="secondaryVariant">#E6B800</color>
 
-    <!-- Variáveis padrão do Material -->
-    <color name="colorPrimary">@color/of_purple</color>
-    <color name="colorPrimaryVariant">#4A148C</color>
-    <color name="colorOnPrimary">@color/of_white</color>
-
-    <color name="colorSecondary">@color/of_yellow</color>
-    <color name="colorSecondaryVariant">#E6B800</color>
-    <color name="colorOnSecondary">@color/of_black</color>
-
-    <color name="colorBackground">@color/of_white</color>
-    <color name="colorOnBackground">@color/of_black</color>
+    <color name="backgroundColor">#F3E5F5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="textColor">#212121</color>
+    <color name="cardBackground">#FFFFFF</color>
 </resources>

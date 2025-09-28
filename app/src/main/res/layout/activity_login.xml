@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#F3F7FA">
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
 
-    <!-- Logo do App -->
     <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:id="@+id/logoImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:src="@drawable/logo_orcafacil"
-        android:contentDescription="logo_desc"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:layout_marginBottom="32dp" />
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_margin="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Campo de Email -->
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="E-mail"
-        app:boxStrokeColor="#6A1B9A"
-        app:hintTextColor="@color/purple_700"
-        android:layout_marginBottom="16dp">
+        app:boxStrokeColor="@color/primaryColor"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtEmail"
@@ -35,14 +36,16 @@
             android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Campo de Senha -->
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:id="@+id/tilSenha"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Senha"
-        app:boxStrokeColor="#6A1B9A"
-        app:hintTextColor="@color/purple_700"
-        android:layout_marginBottom="24dp">
+        app:boxStrokeColor="@color/primaryColor"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtSenha"
@@ -51,27 +54,30 @@
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Botão de Login -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Entrar"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#6A1B9A"
-        android:layout_marginBottom="12dp"
-        android:padding="12dp"
-        android:textStyle="bold"/>
+        android:textAllCaps="false"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tilSenha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
 
-    <!-- Botão de Cadastro -->
     <Button
-        android:id="@+id/btnCadastro"
-        android:layout_width="match_parent"
+        android:id="@+id/btnCadastrar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Criar Conta"
-        android:textColor="#6A1B9A"
-        android:backgroundTint="#F7C20A"
-        android:padding="12dp"
-        android:textStyle="bold"/>
+        android:textAllCaps="false"
+        android:backgroundTint="@color/secondaryColor"
+        android:textColor="@color/textColor"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
