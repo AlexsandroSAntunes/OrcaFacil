@@ -17,7 +17,7 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         btnRegistrar = findViewById(R.id.btnRegistrar);
-        btnVoltarLogin = findViewById(R.id.btnVoltarLogin);
+        //btnVoltarLogin = findViewById(R.id.btnVoltarLogin);
 
         // Ação de Registrar
         btnRegistrar.setOnClickListener(new View.OnClickListener() {

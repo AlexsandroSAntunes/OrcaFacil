@@ -1,5 +1,6 @@
-package com.orcafacil
+package com.orcafacil;
 
+import android.R
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,34 +10,38 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 
 class MainActivity : AppCompatActivity() {
-    private var pieChart: PieChart? = null
-
-    protected override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        pieChart = findViewById(R.id.pieChart)
-        setupChart()
-    }
+        val pieChart = findViewById<PieChart?>(R.id.pieChart)
 
-    private fun setupChart() {
-        val entries: java.util.ArrayList<PieEntry?> = java.util.ArrayList<PieEntry?>()
-        entries.add(PieEntry(65f, "Alimentação"))
-        entries.add(PieEntry(35f, "Outras"))
+        // Lista de entradas (dados fictícios)
+        val gastos = ArrayList<PieEntry?>()
+        gastos.add(PieEntry(600f, "Alimentação"))
+        gastos.add(PieEntry(400f, "Outras despesas"))
 
-        val dataSet: PieDataSet = PieDataSet(entries, "")
+        // Configuração do DataSet
+        val dataSet = PieDataSet(gastos, "Distribuição de Gastos")
         dataSet.setColors(
-            Color.parseColor("#6A1B9A"),
-            Color.parseColor("#F7C20A")
+            *intArrayOf(
+                Color.parseColor("#6A1B9A"),  // Roxo
+                Color.parseColor("#FDD835") // Amarelo
+            )
         )
-        dataSet.setValueTextColor(Color.WHITE)
+        dataSet.setValueTextColor(Color.BLACK)
         dataSet.setValueTextSize(14f)
 
-        val data: PieData = PieData(dataSet)
+        // Criar objeto PieData
+        val data = PieData(dataSet)
         pieChart.setData(data)
+
+        // Configurações visuais do gráfico
         pieChart.getDescription().setEnabled(false)
+        pieChart.setDrawHoleEnabled(true)
+        pieChart.setEntryLabelColor(Color.BLACK)
         pieChart.setCenterText("Gastos")
-        pieChart.animateY(600)
-        pieChart.invalidate()
+        pieChart.setCenterTextSize(16f)
+        pieChart.animateY(1000)
     }
 }

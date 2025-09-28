@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnLogin = findViewById(R.id.btnLogin);
-        btnCadastro = findViewById(R.id.btnCadastro);
+        btnCadastro = findViewById(R.id.btnCadastrar);
 
         // Ação de Login
         btnLogin.setOnClickListener(new View.OnClickListener() {
