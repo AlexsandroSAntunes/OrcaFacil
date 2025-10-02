@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
-    android:background="@color/backgroundColor">
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
 
     <!-- Card Saldo (topo) -->
     <androidx.cardview.widget.CardView
@@ -16,6 +18,7 @@
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
         app:cardBackgroundColor="@color/cardBackground"
+        android:contentDescription="@string/descricao_card_saldo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -25,10 +28,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Saldo: R$ 0,00"
+            android:padding="16dp"
             android:textColor="@color/primaryColor"
             android:textSize="20sp"
-            android:padding="16dp" />
+            tools:text="Saldo: R$ 1.250,50"/> <!-- 'tools:text' é para preview no editor -->
     </androidx.cardview.widget.CardView>
 
     <!-- Card Resumo (abaixo) -->
@@ -40,6 +43,7 @@
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
         app:cardBackgroundColor="@color/cardBackground"
+        android:contentDescription="@string/descricao_card_resumo"
         app:layout_constraintTop_toBottomOf="@id/cardSaldo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -49,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Resumo: Receitas - Despesas"
+            android:text="@string/resumo_label"
             android:textColor="@color/textColor"
             android:textSize="18sp"
             android:padding="16dp" />
@@ -59,19 +63,34 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardGrafico"
         android:layout_width="0dp"
-        android:layout_height="320dp"
+        android:layout_height="0dp"
         android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="6dp"
         app:cardBackgroundColor="@color/cardBackground"
         app:layout_constraintTop_toBottomOf="@id/cardResumo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:contentDescription="@string/descricao_grafico_despesas"/>
     </androidx.cardview.widget.CardView>
+
+    <!-- Botão de Ação Flutuante (FAB) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_add"
+        app:tint="@android:color/white"
+        android:contentDescription="@string/adicionar_transacao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

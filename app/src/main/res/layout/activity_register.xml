@@ -13,8 +13,8 @@
         android:layout_height="120dp"
         android:src="@drawable/logo_orcafacil"
         android:contentDescription="@string/app_name"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_margin="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -36,9 +36,8 @@
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Email e Senha (reaproveitar o padrão do login) -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmailReg"
+        android:id="@+id/tilEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="E-mail"
@@ -49,25 +48,25 @@
         android:layout_marginTop="12dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmailReg"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilSenhaReg"
+        android:id="@+id/tilSenha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Senha"
         app:boxStrokeColor="@color/primaryColor"
-        app:layout_constraintTop_toBottomOf="@id/tilEmailReg"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="12dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtSenhaReg"
+            android:id="@+id/edtSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -81,7 +80,7 @@
         android:textAllCaps="false"
         android:backgroundTint="@color/primaryColor"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/tilSenhaReg"
+        app:layout_constraintTop_toBottomOf="@id/tilSenha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="20dp"/>
