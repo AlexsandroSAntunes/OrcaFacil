@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private Button btnRegistrar, btnVoltarLogin;
+    private Button btnRegistrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,23 +17,16 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         btnRegistrar = findViewById(R.id.btnRegistrar);
-        //btnVoltarLogin = findViewById(R.id.btnVoltarLogin);
 
-        // Ação de Registrar
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ex: salvar dados no Firebase
-            }
-        });
+                Toast.makeText(CadastroActivity.this, "Registro realizado com sucesso!", Toast.LENGTH_SHORT).show();
 
-        // Voltar para Login
-        btnVoltarLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                // Certifique-se que você tem uma LoginActivity.class criada
                 Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                 startActivity(intent);
-                finish();
+                finish(); // Finaliza a tela de cadastro
             }
         });
     }

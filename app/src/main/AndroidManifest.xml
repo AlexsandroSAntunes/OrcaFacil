@@ -15,6 +15,10 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"
             android:exported="true">
+            <activity
+                android:name=".AddTransactionActivity"
+                android:exported="false"
+                android:label="Nova Transação" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
