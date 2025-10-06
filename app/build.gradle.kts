@@ -39,6 +39,9 @@ dependencies {
 
     // gráfico
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.23")
+
+    implementation(platform ("com.google.firebase:firebase-bom:34.3.0"))
+    implementation ("com.google.firebase:firebase-auth")
+    implementation ("com.google.firebase:firebase-firestore")
 }
