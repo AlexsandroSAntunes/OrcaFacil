@@ -8,10 +8,10 @@ buildscript {
     }
     dependencies {
         // Classpath para os plugins do Gradle
-        classpath("com.android.tools.build:gradle:8.5.0")
+        classpath("com.android.tools.build:gradle-api:8.13.0")
 
         // ADICIONE ESTA LINHA: Classpath para o plugin do Google Services
-        classpath("com.google.gms:google-services:4.4.2")
+        classpath("com.google.gms:google-services:4.4.3")
     }
 }
 
